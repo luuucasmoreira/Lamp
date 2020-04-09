@@ -10,12 +10,13 @@ Necessarios para executar no pc
 *Vscode = algumas dependencias do vscode é necessario
 *Python = necessario declarar a variavel de ambiante do python no painel de controle - sistema - configuração avancaçadas do sistema -
 variaveis de ambiente - no campo variaveis de ambiente, clica duas vezes na PATH, adiciona no final o caminho do python depois de 
-ter instalado Parecido com "C:\Users\lucas\AppData\Local\Programs\Python\Python38-32"
+ter instalado Parecido com "C:\Users\lucas\AppData\Local\Programs\Python\Python38-32" 
 
 Dentro do VSCODE
 assim que abrir a pasta aonde quer rodar (ou clone do gitrub) instale as dependencias
 npm init
 npm install johnny-five 
+npm install firebase --save
 
 Run
 no terminal, execute o comando 
