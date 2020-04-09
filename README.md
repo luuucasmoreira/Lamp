@@ -23,3 +23,20 @@ $ node app.js
 se der tudo certo ele vai ficar rodando o node, para teste, pode ir no banco do firebase e trocar o resultado para on
 a lampadava vai mudar seu status para ligado
 para sair do programa é ctrl+c (x2)
+
+Frontend
+Instalando o http-server com
+$npm install http-server -g
+selecione a pasta web no terminal e rode
+$npx http-server
+
+sempre que for rodar o projeto
+Run terminal
+pasta rais rode
+$node app.js 
+para rodar o backend
+selecione em outro terminal a pasta web
+$http-server
+para rodar o frontend
+no browser entre como 
+localhost:8080

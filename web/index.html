@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- imagem para interação-->
+    <img id="lampada" src=""  data-state="" alt="">
+    
+    <!-- integração ao banco de dados -->
+
+       <!-- LINK para FIREBASE -->
+       <!-- <script src="/__/firebase/6.2.0/firebase-app.js"></script>
+       
+        Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0//firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0//firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0//firebase-database.js"></script>
+       
+        <script>
+             var config = {
+            apiKey: "AIzaSyDaltCU5hPZFEXNZreIQkQbKBS_-0Vqadg",
+            authDomain: "iot-lamp-cd664.firebaseapp.com",
+            databaseURL: "https://iot-lamp-cd664.firebaseio.com",
+            storageBucket: "iot-lamp-cd664.appspot.com",
+    
+            };
+
+            firebase.initializeApp(config);
+        //-------LINK PARA FIREBASE -------    
+
+        
+        //-----Ao clicar na lampada, verificar o estado e mudar no banco
+        let lampada = document.querySelector('#lampada');
+
+        //atualizando firebase
+        lampada.addEventListener('click', ()=>{
+            let estado = lampada.getAttribute('data-state');
+
+            if(estado == 'off'){
+                firebase.database().ref('lampada').set('on'); //mudando o estado do firebase para on
+            }else{
+                firebase.database().ref('lampada').set('off');//mudando para off
+            }
+            
+        });
+
+        //A pagina ira mudar toda vez que a função mudar
+        firebase.database().ref('lampada').on('value', snapshot =>{
+
+            let l = snapshot.val();
+
+            if (l=='on'){
+                lampada.src = 'ligada.png';
+
+                lampada.setAttribute('data-state', 'on');
+            }else{
+                lampada.src = 'desligada.png';
+
+                lampada.setAttribute('data-state', 'off');
+            }
+        })
+
+        </script> 
+
+
+      
+</body>
+</html>
