@@ -1,16 +1,28 @@
 {
   "name": "interruptor",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projeto de controle de dispositivos IoT com Firebase e Johnny-Five",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "serve": "http-server -p 8080",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "iot",
+    "arduino",
+    "firebase",
+    "johnny-five"
+  ],
+  "author": "Seu Nome <seu.email@example.com>",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^10.9.0",
-    "http-server": "^0.12.1",
-    "johnny-five": "^1.4.0"
+    "firebase": "^10.11.1",
+    "http-server": "^14.1.1",
+    "johnny-five": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
   }
 }
